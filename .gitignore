@@ -1,6 +1,5 @@
 /.idea/workspace.xml
 /.idea/libraries
-.DS_Store
 .captures
 
 #built application files
@@ -34,7 +33,7 @@ Thumbs.db
 *.iml
 .idea
 .gradle
-build/
+
 
 #NDK
 obj/
@@ -45,4 +44,4 @@ target/
 log
 
 out/
-.idea
+
