@@ -594,6 +594,8 @@ public class BuildJsonForYapi{
         }
         PsiType type = field.getType();
         String name = field.getName();
+        // 字段名蛇形输出，todo:根据注解
+        name = KV.string2SnakeCase(name);
         String remark ="";
         if(field.getDocComment()!=null) {
             remark = DesUtil.getFiledDesc(field.getDocComment());

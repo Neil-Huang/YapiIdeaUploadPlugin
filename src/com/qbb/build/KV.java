@@ -110,5 +110,18 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
         return KV instanceof KV && super.equals(KV);
     }
 
+    public static String string2SnakeCase(String name) {
+        String separator = "_";
+        StringBuilder translation = new StringBuilder();
+        for (int i = 0; i < name.length(); i++) {
+            char character = name.charAt(i);
+            if (Character.isUpperCase(character) && translation.length() != 0) {
+                translation.append(separator);
+            }
+
+            translation.append(Character.toLowerCase(character));
+        }
+        return translation.toString();
+    }
 
 }
